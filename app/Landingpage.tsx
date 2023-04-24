@@ -75,7 +75,7 @@ function Landingpage() {
   return () => {
     window.removeEventListener('load', scroll);
   };
-  },[inView, rightanimation, rotateanimation, rightanimation])
+  },[inView, rightanimation, rotateanimation, rightanimation, leftanimation])
   
 
   return (
