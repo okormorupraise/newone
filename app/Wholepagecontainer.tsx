@@ -17,8 +17,11 @@ function Wholepagecontainer() {
     <main>
       <Landingpage/>
       <Whyenver/>
-      <Services/>
-
+     
+    </main>
+    <footer>
+      <Footer/>
+    </footer>
   
     </>
   )
