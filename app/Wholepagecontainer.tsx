@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Header from './Header'
 import Landingpage from './Landingpage'
 import Whyenver from './Whyenver'
@@ -10,22 +10,30 @@ import Introduction from './Introduction'
 
 function Wholepagecontainer() {
   return (
-    <>
-    <header className='w-full z-30 overflow-hidden'>
+    <div>
+       <header className='w-full z-30 block  overflow-hidden'>
+    <Suspense fallback="loading">
+       
       <Header/>
-    </header>
+   
+      </Suspense>
+       </header>
     <main>
-      <Landingpage/>
+    <Suspense fallback="loading">
+       
+    <Landingpage/>
+    
+       </Suspense>
+      
+     
       <Whyenver/>
       <Services/>
       <Amazingportfolio/>
       <Contactus/>
     </main>
-    <footer>
-      <Footer/>
-    </footer>
+    
   
-    </>
+    </div>
   )
 }
 

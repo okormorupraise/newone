@@ -2,11 +2,11 @@
 import React, { useEffect } from 'react'
 import "./globals.css"
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import s from "..//public/Group 162540.png"
 import s2 from "..//public/Group 162551.png"
-import { useAnimation, motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { useAnimation, motion , useInView} from 'framer-motion'
+
 
 import { Nunito_Sans } from 'next/font/google'
   const nunito = Nunito_Sans(
@@ -15,34 +15,39 @@ import { Nunito_Sans } from 'next/font/google'
   variable:"--font-inter"}
     
     )
+    
 function Landingpage() {
 
    const[state, setstate] = useState(false)
    const leftanimation = useAnimation()
    const rightanimation = useAnimation()
    const rotateanimation = useAnimation()
-   const{ref, inView} = useInView()
+   const ref = useRef(null)
+   const isInView = useInView(ref)
+  
+  useEffect(()=>{
     function scroll(){
      
-    if (typeof window !== "undefined") {
-      if(window.innerWidth < 800){
-    setstate(true)
-       
-  }
-    else{
-      setstate(false)
+      if (typeof window !== "undefined") {
+        if(window.innerWidth < 800){
+      setstate(true)
+         
     }
-  }}
-  useEffect(()=>{
-    if(inView){
+      else{
+        setstate(false)
+      }
+    }}
+    if(isInView){
       leftanimation.start({
         x:0,
+        opacity:1,
         transition:{
           duration:1
         }
       })
       rightanimation.start({
         x:0,
+        opacity:1,
         transition:{
           duration:1
         }
@@ -56,7 +61,7 @@ function Landingpage() {
         }
       })
     }
-    if(!inView){
+    if(!isInView){
       leftanimation.start({
         x:"-60px"
       })
@@ -84,7 +89,7 @@ function Landingpage() {
   return () => {
     window.removeEventListener('load', scroll);
   };
-  },[inView, rightanimation, rotateanimation, leftanimation])
+  },[isInView, rightanimation, rotateanimation, leftanimation])
   
 
   return (
