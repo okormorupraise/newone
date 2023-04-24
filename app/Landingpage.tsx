@@ -11,8 +11,9 @@ import { useAnimation, motion , useInView} from 'framer-motion'
 import { Nunito_Sans } from 'next/font/google'
   const nunito = Nunito_Sans(
     {subsets: ['latin'] ,
-    weight:['400', '600'],
-  variable:"--font-inter"}
+    weight:['400'],
+
+}
     
     )
     
