@@ -11,17 +11,7 @@ import Introduction from './Introduction'
 function Wholepagecontainer() {
   return (
     <>
-    <header className='w-full z-30 overflow-hidden'>
-      <Header/>
-    </header>
-    <main>
-      <Landingpage/>
-      <Whyenver/>
-     
-    </main>
-    <footer>
-      <Footer/>
-    </footer>
+   
   
     </>
   )
