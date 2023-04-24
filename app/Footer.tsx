@@ -1,5 +1,17 @@
 import React from 'react'
-
+import { Montserrat, Nunito_Sans } from 'next/font/google'
+  const nunito = Nunito_Sans(
+    {subsets: ['latin'] ,
+    weight:['400', '600'],
+  variable:"--font-inter"}
+    
+    )
+    const monteserat = Montserrat(
+        {subsets: ['latin'] ,
+        weight:['400', '600', '700'],
+      variable:"--font-inter"}
+        
+        )
 function Footer() {
     const icon = <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
     <rect width="40" height="40" fill="url(#pattern0)"/>
@@ -17,8 +29,8 @@ function Footer() {
             <div className='relative z-20'>
                     {icon}
             </div>
-            <div className="font-[Montserrat] text-[28px] font-[700]
-            relative z-20' leading-[39px] text-white ml-[8px]">
+            <div className={`${monteserat.className} text-[28px] font-[700]
+            relative z-20' leading-[39px] text-white ml-[8px]`}>
                 Enver
             </div>
         </div>
@@ -26,23 +38,23 @@ function Footer() {
             <ul className="grid gap-[40px] text-center lg:flex w-full justify-center lg:justify-between relative z-20">
                
                 <li>
-                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] font-Nunito`}>
+                    <a href="" className={`text-[rgba(225,225,225,0.7)] ${nunito.className} text-[18px] leading-[25px] `}>
                     Support
                     </a>
                 </li>
                 <li>
-                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] font-Nunito`}>
+                    <a href="" className={`text-[rgba(225,225,225,0.7)] ${nunito.className} text-[18px] leading-[25px] `}>
                         Privacy Policy
                     </a>
                 </li>
                 <li>
-                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] font-Nunito`}>
+                    <a href="" className={`text-[rgba(225,225,225,0.7)] ${nunito.className} text-[18px] leading-[25px] `}>
                     Terms and Conditions
                     </a>
                 </li>
             </ul>
         </div>
-        <div className="text-[rgba(255,255,255,0.7)] text-center lg:text-right tracking-[-0.500211px] leading-[38px] font-Nunito"> 
+        <div className={`text-[rgba(255,255,255,0.7)] ${nunito.className} text-center lg:text-right tracking-[-0.500211px] leading-[38px]    `}> 
         © 2020 Enver, All Rights Reserved
         </div>
         

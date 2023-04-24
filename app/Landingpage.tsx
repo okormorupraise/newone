@@ -7,7 +7,16 @@ import s from "..//public/Group 162540.png"
 import s2 from "..//public/Group 162551.png"
 import { useAnimation, motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+
+import { Nunito_Sans } from 'next/font/google'
+  const nunito = Nunito_Sans(
+    {subsets: ['latin'] ,
+    weight:['400', '600'],
+  variable:"--font-inter"}
+    
+    )
 function Landingpage() {
+
    const[state, setstate] = useState(false)
    const leftanimation = useAnimation()
    const rightanimation = useAnimation()
@@ -79,18 +88,18 @@ function Landingpage() {
   
 
   return (
-    <div ref={ref} className='flex w-full  justify-center'>
+    <div ref={ref} className={` flex w-full  justify-center`}>
         <div className='max-w-[1158.34px]  px-[20px]  w-full small:mt-[146px] mt-[66px]'>
             <div className="grid grid-cols-1 small:grid-cols-2   justify-between ">
-                <motion.div animate={leftanimation} className='relative' initial={{x:'-60px'}}>
+                <motion.div animate={leftanimation} className='relative' initial={{x:'-60px', opacity:0}}>
                   <div className="small:text-[80px] text-[42px] relative z-20 max-w-[582px] w-full leading-[63px] small:leading-[84px] font-[700] font-[Graphik] text-white">
                   Build Your Awesome Platform
                   </div>
-                  <div className='font-Nunito relative z-20 text-[16px] small:text-[21px] leading-[24px] small:leading-[39px] tracking-0 small:tracking-[-0.656526px] text-[rgba(255,255,255,0.7)] mt-[30px] small:mt-[24px] max-w-[536px] w-full'>
+                  <div className={`${nunito.className} relative z-20 text-[16px] small:text-[21px] leading-[24px] small:leading-[39px] tracking-0 small:tracking-[-0.656526px] text-[rgba(255,255,255,0.7)] mt-[30px] small:mt-[24px] max-w-[536px] w-full`}>
                   Enver studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.
                   </div>
                   <div className="small:w-[204px] w-[166px] mt-[50px] h-[44px] small:h-[58px] flex items-center justify-center bg-[#5454d4] rounded-[4px]">
-                  <div className="text-white text-[16.0889px] small:text-[20px] mr-[8px] leading-[22px] small:leading-[27px] con font-[700] font-Nunito">
+                  <div className={`${nunito.className} text-white text-[16.0889px] small:text-[20px] mr-[8px] leading-[22px] small:leading-[27px]  font-[700]`}>
                     Our Services
                   </div>
                   <div>
@@ -105,7 +114,7 @@ function Landingpage() {
                   </div>
                 </div>
                 </motion.div>
-                <motion.div animate={rightanimation} initial={{x: '60px'}} className={`w-full relative small:top-[-20px] small:pl-[48px]`}>
+                <motion.div animate={rightanimation} initial={{x: '60px', opacity:0}} className={`w-full relative small:top-[-20px] small:pl-[48px]`}>
                   
                   <Image alt="" className='w-full' src={state === true ? s2 : s} width={600} height={800}/>
                   <motion.div animate={rotateanimation} className="absolute small:block hidden top-[5px] small:left-[-35px]">

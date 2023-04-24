@@ -4,7 +4,13 @@ import {FaPause, FaPlay} from "react-icons/fa"
 import "./globals.css"
 import { useInView } from 'react-intersection-observer'
 import { useAnimation, motion } from 'framer-motion'
-
+import { Montserrat, Nunito_Sans } from 'next/font/google'
+  const nunito = Nunito_Sans(
+    {subsets: ['latin'] ,
+    weight:['400', '600'],
+  variable:"--font-inter"}
+    
+    )
 const Whyenver = () => {
  const d = useRef<any>(null)
  const[isplaying, setisplaying] = useState<boolean>(false)
@@ -45,7 +51,7 @@ useEffect(()=>{
           <div className='font-[Graphik] font-[700] text-[36px] sm:text-[60px] leading-[54px] sm:leading-[70px] text-[white] max-w-[588px] w-full'>
           Why Enver Is The Best Choice?
           </div>
-          <div id='text' className='font-Nunito text-[16px] leading-[24px] sm:text-[21px] sm:mt-[0] mt-[30px] sm:leading-[39px] tracking-[-0.656526px] text-[rgba(255,255,255,0.7)]'>
+          <div id='text' className={`${nunito.className} text-[16px] leading-[24px] sm:text-[21px] sm:mt-[0] mt-[30px] sm:leading-[39px] tracking-[-0.656526px] text-[rgba(255,255,255,0.7)]`}>
           Watch this one minute video so you understand why you should use our services!
           </div>
         </div>

@@ -1,5 +1,18 @@
 import React from 'react'
-
+import './globals.css'
+import { Montserrat, Nunito_Sans } from 'next/font/google'
+  const nunito = Nunito_Sans(
+    {subsets: ['latin'] ,
+    weight:['400', '600'],
+  variable:"--font-inter"}
+    
+    )
+    const monteserat = Montserrat(
+        {subsets: ['latin'] ,
+        weight:['400', '600', '700'],
+      variable:"--font-inter"}
+        
+        )
 function Header() {
     const icon = <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
     <rect width="40" height="40" fill="url(#pattern0)"/>
@@ -18,37 +31,37 @@ function Header() {
             <div className='relative z-20'>
                     {icon}
             </div>
-            <div className="font-[Montserrat] text-[28px] font-[700]
-            relative z-20' leading-[39px] text-white ml-[8px]">
+            <div className={`${monteserat.className} text-[28px] font-[700]
+            relative z-20' leading-[39px] text-white ml-[8px]`}>
                 Enver
             </div>
         </div>
-        <div className="max-w-[401px] small:block hidden w-full relative z-20'">
+        <div className={` max-w-[401px] small:block hidden w-full relative z-20 ${nunito.className}`}>
             <ul className="flex w-full justify-between relative z-20">
                 <li>
-                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] font-Nunito`}>
+                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] `}>
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] font-Nunito`}>
+                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] `}>
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] font-Nunito`}>
+                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] `}>
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] font-Nunito`}>
+                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] `}>
                         Home
                     </a>
                 </li>
             </ul>
         </div>
         <div className="small:block hidden">
-            <button className="w-[148.93px] h-[44px] rounded-[5px] border-[1px] border-[white]  filter backdrop backdrop-blur-[1px] text-[white] leading-[22px]  font-Nunito tracking-[-0.500211px]">
+            <button className={`${nunito.className} w-[148.93px] h-[44px] rounded-[5px] border-[1px] border-[white]  filter backdrop backdrop-blur-[1px] text-[white] leading-[22px]   tracking-[-0.500211px]`}>
                 Contact Us
             </button>
         </div>

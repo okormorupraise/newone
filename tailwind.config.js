@@ -19,6 +19,7 @@ module.exports = {
       fontFamily: {
         'Outfit': ['Outfit'],
         'Nunito': ['Nunito Sans'],
+        inter: ['var(--font-inter)']
       }
     },
   },

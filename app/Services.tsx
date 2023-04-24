@@ -7,6 +7,13 @@ import {Servicesdata2} from "..//app/servicesinterface"
 import { useState } from 'react'
 import { useAnimation, motion, } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { Montserrat, Nunito_Sans } from 'next/font/google'
+  const nunito = Nunito_Sans(
+    {subsets: ['latin'] ,
+    weight:['400', '600'],
+  variable:"--font-inter"}
+    
+    )
 function Services() {
   const shake = useAnimation()
   const move = useAnimation()
@@ -71,10 +78,10 @@ function Services() {
   <div className='flex justify-center'>
   {thu.svg}
   </div>
-  <div className='text-center text-white text-[24px] sm:text-[28px] leading-[33px] sm:leading-[38px] font-[600] my-[20px] font-Nunito tracking-[-0.750316px]'>
+  <div className={`text-center text-white text-[24px] sm:text-[28px] leading-[33px] sm:leading-[38px] font-[600] my-[20px]  tracking-[-0.750316px] ${nunito.className}`}>
   {thu.name}
   </div>
-  <div className='font-Nunito text-[20px] leading-[28px] text-center text-[rgba(255,255,255,0.7)] tracking-[-0.500211px]'>
+  <div className={`${nunito.className} text-[20px] leading-[28px] text-center text-[rgba(255,255,255,0.7)] tracking-[-0.500211px]`}>
   {thu.details}
   </div>
 </motion.div>

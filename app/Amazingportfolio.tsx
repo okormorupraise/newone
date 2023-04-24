@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image'
+import './globals.css'
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useAnimation } from 'framer-motion'
@@ -8,6 +9,13 @@ import pic from "..//public/image 29.png"
 import pic2 from "..//public/image 28.png"
 import pic3 from "..//public/image 30.png"
 import { FaLessThanEqual } from 'react-icons/fa'
+import { Montserrat, Nunito_Sans } from 'next/font/google'
+  const nunito = Nunito_Sans(
+    {subsets: ['latin'] ,
+    weight:['700'],
+  variable:"--font-inter"}
+    
+    )
 const Amazingportfolio = () => {
     const animation = useAnimation()
     const dark = 'w-[8px] h-[8px] bg-[#121213] rounded-[10px]'
@@ -39,7 +47,10 @@ const Amazingportfolio = () => {
         
        
         
-    }}
+    }
+else{
+    return null
+}}
     
     function scrollbackward(){
         if(number != 0){
@@ -62,7 +73,7 @@ const Amazingportfolio = () => {
   return (
     <div className='mt-[150px]  relative flex justify-center'>
       <div className='relative  max-w-[1158.34px]  px-[20px]  w-full'>
-        <div className='font-Nunito font-[700] md:font-[800] text-[36px] md:text-[58px] leading-[54px] md:leading-[79px] text-white'>
+        <div className={`${nunito.className} font-[700] md:font-[800] text-[36px] md:text-[58px] leading-[54px] md:leading-[79px] text-white`}>
         Our Awesome Portofolio
         </div>
         <div className='w-full mt-[50px] h-fit overflow-hidden'>
