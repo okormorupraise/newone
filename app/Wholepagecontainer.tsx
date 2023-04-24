@@ -18,12 +18,7 @@ function Wholepagecontainer() {
       <Landingpage/>
       <Whyenver/>
       <Services/>
-      <Amazingportfolio/>
-      <Contactus/>
-    </main>
-    <footer>
-      <Footer/>
-    </footer>
+
   
     </>
   )
