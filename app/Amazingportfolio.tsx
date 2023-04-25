@@ -71,33 +71,32 @@ else{
 
 
   return (
-    <div className='mt-[150px]  relative flex justify-center'>
+    <div id='Portfolio' className='mt-[150px]  relative flex justify-center'>
       <div className='relative  max-w-[1158.34px]  px-[20px]  w-full'>
         <div className={`${nunito.className} font-[700] md:font-[800] text-[36px] md:text-[58px] leading-[54px] md:leading-[79px] text-white`}>
         Our Awesome Portofolio
         </div>
-        <div className='w-full mt-[50px] h-fit overflow-hidden'>
+        <div className='w-full mt-[50px] h-fit overflow-scroll'>
                 <motion.div animate={{
             left:`${number * 100}%`
-        }} className='flex relative lg:w-[200%] w-[600%] md:w-[300%] '>
-    <div className='md:p-[24px]   w-[100%] h-fit'>
-        <Image src={pic} className='w-full ' alt='' width={400} height={500}/>
+        }} className='flex relative lg:w-[200%] w-[600%] md:max-h-[355px] lg:max-h-[276px] md:w-[300%] '>
+    <div className='md:p-[24px]  h-fit  w-[100%] '>
+        <Image src="https://cdn.dribbble.com/userupload/3898304/file/original-52f249d614e34e465013a54d5108836d.jpg?compress=1&resize=1024x768&vertical=center" loading='eager' className='w-full h-full rounded-[12px]' alt='' width={4000} height={5000}/>
     </div>
-    <div className='md:p-[24px]   h-[100%]  w-[100%]  '>
-        <Image src={pic2} className='w-max  ' alt='' width={4000} height={5000}/>
+    <div className='md:p-[24px] h-full   w-[100%] '>
+        <Image src="https://cdn.dribbble.com/userupload/4285816/file/original-12d1338f4a693ee21d9a8bbfaf71534c.png?compress=1&resize=1024x768" loading='eager' className='w-full  h-full rounded-[12px]' alt='' width={4000} height={5000}/>
     </div>
-    <div className='md:p-[24px]   h-[100%]  w-[100%]  '>
-        <Image src={pic3} className='w-max ' alt='' width={4000} height={5000}/>
+    <div className='md:p-[24px] h-full   w-[100%] '>
+        <Image src="https://cdn.dribbble.com/userupload/4207349/file/original-a567b4bbac95154059f8bfb2926dcd05.png?compress=1&resize=1024x768" loading='eager' className='w-full  h-full rounded-[12px]' alt='' width={4000} height={5000}/>
     </div>
-    <div className='md:p-[24px]  h-[100%]  w-[100%]  '>
-        <Image src={pic} className='w-max' alt='' width={4000} height={5000}/>
+    <div className='md:p-[24px] h-full   w-[100%] '>
+        <Image src="https://cdn.dribbble.com/users/41071/screenshots/6601534/foundation-freebie_4x.png?compress=1&resize=768x576&vertical=top" loading='eager' className='w-full  h-full rounded-[12px]' alt='' width={4000} height={5000}/>
     </div>
-    <div className='md:p-[24px]   h-[100%]  w-[100%]  '>
-        <Image src={pic} className='w-max' alt='' width={4000} height={5000}/>
+    <div className='md:p-[24px] h-full   w-[100%] '>
+        <Image src="https://cdn.dribbble.com/users/64146/screenshots/14282155/media/edce38a541cfcb47454ea6698ee882b3.jpg?compress=1&resize=768x576&vertical=top" loading='eager' className='w-full  h-full rounded-[12px]' alt='' width={4000} height={5000}/>
     </div>
-
-    <div className='md:p-[24px]  mb-0  h-[100%]  w-[100%]  '>
-        <Image src={pic} className='w-max ' alt='' width={4000} height={5000}/>
+     <div className='md:p-[24px] h-full   w-[100%] '>
+        <Image src="https://cdn.dribbble.com/userupload/4252923/file/original-194378644f4378567e1e62720d41ac2f.png?compress=1&resize=1024x768" loading='eager' className='w-full  h-full rounded-[12px]' alt='' width={4000} height={5000}/>
     </div>
 
                                     

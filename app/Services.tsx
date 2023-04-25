@@ -74,7 +74,7 @@ function Services() {
     const e =   data.map(thu=>{
     
       return(
-<motion.div   className={`px-[42px] py-[48px] hover:shadow-lg transition-all ease-in-out hover:shadow-[#F04037]`} key={thu.name}>
+<motion.div  className={`px-[42px] py-[48px] hover:shadow-lg transition-all ease-in-out hover:shadow-[#F04037]`} key={thu.name}>
   <div className='flex justify-center'>
   {thu.svg}
   </div>
@@ -88,7 +88,7 @@ function Services() {
       )
   })
   return (
-    <motion.div ref={ref}  className='flex mt-[140px] sxl:mt-[150px] relative justify-center'>
+    <motion.div  id='Services' ref={ref}  className='flex mt-[140px] sxl:mt-[150px] relative justify-center'>
       <div className='max-w-[1158.34px]  px-[20px]  w-full'>
         <div className='font-[Graphik] relative flex sm:justify-center w-full text-[36px] sxl:text-[60px] leading-[54px] sxl:leading-[70px] sm:text-center font-[700] text-[white]'>
             <motion.div  animate={move} initial={{y:"50px"}} className='max-w-[695px]  w-full'>

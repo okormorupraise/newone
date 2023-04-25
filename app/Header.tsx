@@ -65,23 +65,23 @@ function scroll2(){
         {state === true ? <div className={` max-w-[401px] small:block hidden w-full relative z-20 ${nunito.className}`}>
             <ul className="flex w-full justify-between relative z-20">
                 <li>
-                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] `}>
+                    <a href="/" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] `}>
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] `}>
-                        Home
+                    <a href="/#Services" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] `}>
+                        Service
                     </a>
                 </li>
                 <li>
-                    <a href="" className={`text-[rgba(24,23,23,0.7)] text-[18px] leading-[25px] `}>
-                        Home
+                    <a href="/#Portfolio" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] `}>
+                        Portfolio
                     </a>
                 </li>
                 <li>
-                    <a href="" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] `}>
-                        Home
+                    <a href="/#Contact" className={`text-[rgba(225,225,225,0.7)] text-[18px] leading-[25px] `}>
+                        Contact
                     </a>
                 </li>
             </ul>
@@ -94,28 +94,18 @@ function scroll2(){
                      </a>
                  </li>
                  <li>
-                     <a href='Discover' className=" font-bold text-3xl  ">
-                         Discover
+                     <a href='/#Services' className=" font-bold text-3xl  text-[#ADB9C7]">
+                         Service
                      </a>
                  </li>
                  <li>
-                     <a href='/' className="hover:text-white text-[#ADB9C7] font-bold text-3xl  ">
-                         Docs
+                     <a href='/#Portfolio' className="hover:text-white text-[#ADB9C7] font-bold text-3xl  ">
+                         Portfolio
                      </a>
                  </li>
                  <li>
-                     <a href='/' className="hover:text-white text-[#ADB9C7] font-bold text-3xl  ">
-                         Blog
-                     </a>
-                 </li>
-                 <li>
-                     <a href='/' className="hover:text-white text-[#ADB9C7] font-bold text-3xl  ">
-                         About Us
-                     </a>
-                 </li>
-                 <li>
-                     <a href='/' className="hover:text-white text-[#ADB9C7] font-bold text-3xl  ">
-                         Contact Us
+                     <a href='/#Contact' className="hover:text-white text-[#ADB9C7] font-bold text-3xl  ">
+                         Contact
                      </a>
                  </li>
              </ul>
