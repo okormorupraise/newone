@@ -10,20 +10,19 @@ import Introduction from './Introduction'
 
 function Wholepagecontainer() {
   return (
-    <div>
+    <>
        <header className='w-full z-30 block  overflow-hidden'>
-    <Suspense fallback="loading">
+    
        
       <Header/>
    
-      </Suspense>
        </header>
     <main>
-    <Suspense fallback="loading">
+  
        
     <Landingpage/>
     
-       </Suspense>
+     
       
      
       <Whyenver/>
@@ -31,9 +30,12 @@ function Wholepagecontainer() {
       <Amazingportfolio/>
       <Contactus/>
     </main>
+    <footer>
+      <Footer/>
+      </footer>
     
   
-    </div>
+    </>
   )
 }
 

@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
   return (
-    <div className="relative overflow-x-hidden">
+    <div className='overflow-hidden w-full'>
      <Wholepagecontainer/>
     </div>
   )
