@@ -64,10 +64,12 @@ function Landingpage() {
     }
     if(!isInView){
       leftanimation.start({
-        x:"-60px"
+        x:"-60px",
+        opacity:0,
       })
       rightanimation.start({
         x:'60px',
+        opacity:0,
         transition:{
           duration:1
         }
