@@ -1,5 +1,6 @@
 import Header from "./Header"
 import Landingpage from "./Landingpage"
+import Services from "./Services"
 import Whyenver from "./Whyenver"
 export default function Home() {
 
@@ -8,6 +9,7 @@ export default function Home() {
 <Header/>
 <Landingpage/>
 <Whyenver/>
+<Services/>
     </div>
   )
 }
