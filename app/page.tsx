@@ -1,3 +1,4 @@
+import Amazingportfolio from "./Amazingportfolio"
 import Header from "./Header"
 import Landingpage from "./Landingpage"
 import Services from "./Services"
@@ -10,6 +11,7 @@ export default function Home() {
 <Landingpage/>
 <Whyenver/>
 <Services/>
+<Amazingportfolio/>
     </div>
   )
 }
